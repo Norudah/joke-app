@@ -18,8 +18,7 @@ jobs:
 
       - name: Echo the name
         run:
-          export NAME=tartifouette
-          echo "Hello ${{ NAME }}"
+          echo "Hello World"
   
   deploy:
     runs-on: ubuntu-latest
