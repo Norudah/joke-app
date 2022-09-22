@@ -8,7 +8,7 @@ workflows:
     jobs:
       - node/run:
           npm-run: build
-          filter:
+          filters:
             branches:
               only:
                 - circle-ci
