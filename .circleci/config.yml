@@ -16,7 +16,7 @@ workflows:
       - node/test:
             requires:
               - "node/run"
-            filter:
+            filters:
               branches:
                 only:
                   - circle-ci
