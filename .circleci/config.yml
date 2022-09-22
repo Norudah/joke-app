@@ -6,19 +6,20 @@ orbs:
 jobs:
   build-test:
     docker:
-      - image: cimg/base:stable
-    
+      - image:  cimg/base:stable
+
     steps:
-      - checkout
+      - checkout 
+
       - node/install:
-          node-version: "16.13"
-      
+          node-version: '16.13'
+
       - node/install-packages:
           cache-path: ~/project/node_modules
-          override-ci-commands: npm install
-
+          override-ci-command: npm install
       - run: npm run build
       - run: npm test
+
 
 workflows:
   build:
